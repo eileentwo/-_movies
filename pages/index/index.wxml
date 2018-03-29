@@ -1,0 +1,12 @@
+<import src='/common/template/list.wxml'/>
+<template is='movie-list' data='{{movies,loading}}' />
+
+<!-- 
+import:引入模板方式是引入导入的模板
+
+include 可以将目标文件除了 <template/> <wxs/> 外的整个代码引入，相当于是拷贝到 include 位置
+例如：
+<!--<include src="header.wxml"/>
+<view> body </view>
+<include src="footer.wxml"/>
+ -->

@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/user/user",
+    "pages/subject/subject",
+    "pages/movieDetail/movieDetail",
+    "pages/subjectList/subjectList",
+     "pages/history/history",
+    "pages/share/share"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "预告",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/home-off.png",
+      "selectedIconPath": "/images/home-on.png"
+    },
+    {
+      "pagePath": "pages/subject/subject",
+      "text": "分类",
+      "iconPath": "/images/order-off.png",
+      "selectedIconPath": "/images/order-on.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "/images/my-off.png",
+      "selectedIconPath": "/images/my-on.png"
+    }]
+  }
+}

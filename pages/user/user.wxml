@@ -1,0 +1,33 @@
+<!--pages/user/user.wxml-->
+<view class='container'>
+
+  <view class='userInfo'>
+    <image class='avatarUrl' src='{{avatarUrl}}'></image>
+    <text class='nickName'>{{nickName}}</text>
+  </view> 
+
+  <view class="share" bindtap="gotoShare">
+    <text>分享小程序</text>
+    <image src="../../images/more.jpg" mode="aspectFit"></image>
+  </view>
+
+  <view class="history" bindtap="gotoHistory">
+    <text>观看历史</text>
+    <image src="../../images/more.jpg" mode="aspectFit"></image>
+  </view>
+
+  <view class="history-list" wx:if="{{movies.length}}">
+
+    <view class="movie-item" wx:for="{{movies}}" wx:key="{{item._id}}" bindtap="gotoDetail" data-movie-data="{{item}}">
+      <image class="poster" mode="widthFix" lazy-load="true" src="{{item.poster}}" />
+      <view class="title">
+        <text>{{item.title}} <text class="rate">{{item.rate}}</text></text>
+      </view>
+      <view class="year-type">
+        <text>{{item.types}} / {{item.year}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

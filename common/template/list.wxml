@@ -1,0 +1,33 @@
+<template name='movie-list'>
+<scroll-view scroll-y="true" lower-threshold="200" style="height:100%" bindscrolltolower ="scrollHandle" >
+<!--scroll-y  Y轴滚动事件  bindscrolltolower 向下滚动事件 lower-threshold 距底部/右边多远时（单位px），触发 scrolltolower 事件 -->
+ <view class='list-item' wx:for="{{movies}}" wx:key="{{index}}" wx:for-item = "movieData">
+ <!-- 
+wx:for="{{movies}}" 以movies为条件进行循环 
+wx:for-item 指定数组当前元素的变量  
+wx:for-index 可以指定数组当前下标的变量名
+-->
+  <view class='movie-item' wx:for="{{movieData}}" wx:key="{{item._id}}" bindtap='gotoDetail' data-id='{{item._id}}' data-movie-data='{{item}}'>
+  <!-- 
+循环 movieData
+wx:if="{{item}}  如果movieData中有数组
+data-movie-data="{{item}}" 为movieData增加一个自定义属性且将循环出来的数据存入这个自定义属性中
+bindtap  跳转用到的事件   -->
+    <image class='poster' lazy-load='true'  mode='widthFix' src='{{item.poster}}'></image>
+    <!--lazy-load 图片懒加载为true时启动，只针对page与scroll-view下的image有效，无需我们自己去写懒加载函数   mode： 图片裁剪、缩放的模式 -->
+  <view class='title'>
+    <text>{{item.title}}</text>
+  </view>
+  <view class='info'>
+   评分:<text class='rate'>{{item.rate}}</text> / 年份：{{item.year}}
+  </view>
+  <view class='info'>
+    <text>{{item.types}} </text>
+  </view>
+  </view>
+ </view>
+ <view class='loading' wx:if="{{loading}}">
+    <image src='../../images/loading.gif'></image>
+  </view>
+</scroll-view>
+</template> 

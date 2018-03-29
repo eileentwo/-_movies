@@ -1,0 +1,7 @@
+/* pages/share/share.wxss */
+.info{
+  text-align: center;
+  font-size: 40rpx;
+  color: #666;
+  padding-top:20rpx; 
+}

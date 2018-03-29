@@ -1,0 +1,11 @@
+<!--pages/share/share.wxml-->
+<image src='{{imgSrc}}' mode='aspectFit' bindtap='saveQRCode'></image>
+<!--
+mode='aspectFit'
+scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满image元素。
+aspectFit 保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。 
+QRCode  微信二维码
+ -->
+<view class="info">
+  <text>点击保存二维码分享给好友吧!</text>
+</view>
